@@ -264,3 +264,31 @@ html, body {
 .newsletter button:hover {
   background-color: #b94632;
 }
+@media (max-width: 768px) {
+    .sneaker-grid {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    .sneaker-card {
+        width: 250px;
+        min-width: 250px;
+        padding: 12px;
+    }
+    .sneaker-image {
+        height: 180px;
+    }
+}
+@media (max-width: 480px) {
+    .sneaker-grid {
+        gap: 12px;
+        padding: 0 8px;
+    }
+    .sneaker-card {
+        width: 220px;
+        min-width: 220px;
+        padding: 10px;
+    }
+    .sneaker-image {
+        height: 160px;
+    }
+}
