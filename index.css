@@ -11,6 +11,7 @@ html, body {
   flex-direction: column;
   display: flex;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 .hero {
   position: relative;
@@ -270,32 +271,122 @@ html, body {
   background-color: #b94632;
 }
 @media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
     .sneaker-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 15px;
         padding: 0 10px;
     }
+
     .sneaker-card {
-        width: 250px;
-        min-width: 250px;
+        width: 100%;
+        min-width: unset;
         padding: 12px;
     }
+
     .sneaker-image {
         height: 180px;
     }
 }
+
 @media (max-width: 480px) {
+    .hero {
+        height: 45vh;
+    }
+
+    .hero img {
+        object-position: 40% center;
+    }
+
+    .hero-text {
+        bottom: 15px;
+        left: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+    .header {
+        padding: 10px 20px; 
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav ul {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
     .sneaker-grid {
-        gap: 12px;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
         padding: 0 8px;
     }
+
     .sneaker-card {
-        width: 220px;
-        min-width: 220px;
+        width: 100%;
+        min-width: unset;
         padding: 10px;
     }
+
+    .sneaker-card h3 {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
     .sneaker-image {
         height: 160px;
     }
+    .footer {
+        padding: 20px; 
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        min-width: 100%; 
+    }
+
+    .footer-column h3 {
+        margin-bottom: 10px; 
+    }
+
+    .footer-column ul li {
+        margin: 5px 0;
+    }
 }
-
-
